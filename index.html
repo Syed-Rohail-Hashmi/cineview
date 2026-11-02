@@ -1,0 +1,76 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CineView - Movie Explorer Dashboard</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <header class="main-header">
+            <div class="header-container">
+                <h1 class="brand-logo">
+                    <span class="brand-icon">🎬</span>CineView
+                </h1>
+                
+                <form id="search-form" class="search-form">
+                    <div class="search-wrapper">
+                        <input type="text" id="search-input" placeholder="Search for a movie..." autocomplete="off">
+                        <div id="suggestions" class="suggestions-dropdown dropdown-hidden"></div>
+                    </div>
+                    <button type="submit" id="search-button">Search</button>
+                </form>
+
+                <div class="header-right-box">
+                    <button id="menu-toggle-btn" class="menu-toggle-btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+
+                <nav id="nav-menu" class="nav-menu menu-hidden">
+                    <a href="#" id="nav-home" class="nav-link active-filter">Home</a>
+                    <a href="#" id="nav-popular" class="nav-link">Popular</a>
+                    <a href="#" id="nav-top-rated" class="nav-link">Top Rated</a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div id="genre-tags" class="genre-container"></div>
+
+            <div id="spinner" class="spinner-hidden"></div>
+            
+            <div id="error-msg" class="error-hidden"></div>
+
+            <div class="section-header">
+                <h2 id="section-title">Popular Movies</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <section id="movie-grid" class="movie-grid-layout">
+            </section>
+
+            <div class="load-more-box">
+                <button id="load-more-btn" class="load-more-btn btn-hidden">Load More</button>
+            </div>
+        </main>
+
+        <footer class="main-footer">
+            <p>Powered by <a href="https://www.themoviedb.org" target="_blank" rel="noopener noreferrer">TMDB</a></p>
+        </footer>
+
+        <div id="modal" class="modal-overlay modal-hidden">
+            <div class="modal-box">
+                <button id="modal-close" class="modal-close-btn">&times;</button>
+                <div id="modal-content" class="modal-details-body">
+                </div>
+            </div>
+        </div>
+
+        <script src="config.js"></script>
+        <script src="script.js"></script>
+    </body>
+    </html>
